@@ -1,0 +1,434 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /* overflow-x: hidden; */
+    scroll-behavior: smooth;
+    color: white;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+    background-color: black;
+    overflow-x: hidden;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* styling of the navbar */
+
+.background{
+    background:url(images/demonbg.jpeg);
+
+    
+    width: 100vw;
+    height: 100vh;
+    
+  /* Center and scale the image nicely */
+  background-position: inherit;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+    
+} 
+.navbar{
+    display: flex;
+    align-items: center;
+    /* border: 1px solid black; */
+    height: 100px;
+    /* background-color: black; */
+    /* opacity: 0.8; */
+    
+    
+}
+.navbar > div{
+    width: 30px;
+    height: 30px;
+}
+.icon{
+    width: 30px;
+    height: 30px;
+    /* opacity: 0.3; */
+}
+
+.netflix_icon{
+    width: 20px;
+    height: 20px;
+    display: flex;
+    cursor: pointer;
+    background-blend-mode: inherit;
+    
+    
+}
+.netflix_icon> img{
+    position: relative;
+    top: -30px;
+    
+}
+
+.nav-main-items{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: relative;
+    right: -30px;
+    left: 12rem;
+    cursor: pointer;
+    
+   
+    
+    
+}
+.middle_list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+   
+    right: -30px;
+    left: 10rem; 
+}
+
+.nav-items {
+    margin-left: 1rem; 
+    word-wrap: normal;
+    font-size: 19px;
+}
+
+/* Ensure no wrapping occurs */
+.nav-items {
+    white-space: nowrap; 
+}
+
+.fade{
+    opacity: 0.7;
+}
+.myList{
+    text-decoration: none;
+    color: white;
+    
+}
+
+.nav-items:hover{
+    color: red;
+}
+
+.right-section{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+.right-images{
+    position: relative;
+    left:110rem;
+    margin-left: 20px;
+    /* background-color: 1px solid salmon; */
+    filter: invert(100%);
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+}
+.right-images:hover{
+    width: 40px;
+    height: 40px;
+}
+
+/* Middle content */
+.title{
+    /* display: flex; */
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    top: 100px;
+    
+}
+.movie-name{
+    position: relative;
+    left: 11rem;
+    top: 10rem;
+    font-size: 100px;
+    color: rgb(72, 60, 60);
+    
+}
+.button {
+    position: relative;
+    left: 11rem;
+    top: 13rem;
+ 
+    padding: 10px 20px; 
+    background-color: white; 
+    color: black; 
+    font-size: 16px;
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: background-color 0.3s, transform 0.2s; 
+    text-align: center; 
+    text-decoration: none; 
+    display: inline-block; 
+
+
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+
+    outline: none;
+}
+
+.button:hover, .button:focus {
+
+    background-color: red;
+    color: white;
+
+  
+    transform: translateY(-2px);
+}
+
+.button:active {
+    
+    transform: translateY(1px);
+}
+
+
+.button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed; 
+}
+
+
+
+
+/* end of middle content */
+.side-headings{
+    color: white;
+    font-size: 25px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+/* carrousel */
+
+.media-scroller,.media-group{
+
+    display: grid;
+    grid-auto-flow: column;
+    /* gap: 0.25rem; */
+    
+}
+.media-scroller{
+    display: grid;
+    grid-auto-columns: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    /* gap: 0.25rem; */
+    -webkit-overflow-scrolling: touch;
+
+}
+.media-group{
+    grid-auto-columns: 1fr;
+    
+    /* gap: 0.1rem; */
+    width: 100%;
+   
+}
+
+.media-element{
+    border-radius: .25rem;
+    margin-left: 10px;
+    width: 100%;
+    height: auto;
+    /* width: 19rem; */
+    object-fit: contain;
+    height: 100%;
+  
+}
+
+.media-element> img{
+    /* width: 100%; */
+    aspect-ratio: 16/9;
+    object-fit: contain;
+    width: 250px;
+    height: 250px;
+    padding: 2px;
+    border-radius: 0.25rem;
+    cursor: pointer;
+}
+
+
+.fast-forward{
+    margin-left: -33px;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: 7rem;
+    filter: invert(100%);
+}
+.backward{
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: 7rem;
+    rotate: 180;
+    filter: invert(100%);
+}
+
+
+/* footer */
+.icon-footer{
+    position: relative;
+    margin-top: 4%;
+    filter: invert(100%);
+    margin-left: 13px;
+    height: 20px;
+    width: 20px;
+    left: 20%;
+    margin-bottom: 15px;
+}
+
+.maingrid{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    width: auto;
+    margin-left: 20%;
+    /* border: 1px solid white; */
+    opacity: 0.5;
+    margin-bottom: 2rem;
+    
+
+}
+.firstgrid{
+    /* border: 1px solid white; */
+    height: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    /* text-align: center; */
+}
+.firstgrid>p{
+    line-height: 1;
+    margin-bottom: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    margin-bottom: 10px;
+    
+}
+.secondgrid{
+    /* border: 1px solid white; */
+    height: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    /* text-align: center; */
+    margin-left: -15px;
+}
+.secondgrid>p{
+    line-height: 1;
+    margin-bottom: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    margin-bottom: 10px;
+    margin-left: -140px;
+}
+.thirdgrid{
+    /* border: 1px solid white; */
+    height: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    /* text-align: center; */
+    margin-left: -10px;
+}
+.thirdgrid>p{
+    line-height: 1;
+    margin-bottom: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    margin-bottom: 10px;
+    margin-left: -140px;
+}
+.fourthgrid{
+    /* border: 1px solid white; */
+    height: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    /* text-align: center; */
+    margin-left: -40px;
+}
+.fourthgrid>p{
+    line-height: 1;
+    margin-bottom: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    margin-bottom: 10px;
+    margin-left: -240px;
+    
+}
+.servicecode{
+    border: 1px solid white;
+    display: inline;
+    padding: 8px;
+    /* padding-bottom: 3px; */
+    position: relative;
+    left: 20%;
+    margin-top: 3rem;
+    opacity: 0.6;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    margin-bottom: 13px;
+}
+.lastone{
+    position: relative;
+    left: 20%;
+    margin-bottom: 30px;
+    margin-top: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    opacity: 0.6;
+}
+
+
